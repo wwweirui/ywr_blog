@@ -18,6 +18,11 @@ hero:
       link: /api-examples
 
 features:
+  - icon: 📝
+    title: 算法自律
+    details: 动动手，用用脑
+    link: /api-examples
+    linkText: WTF
   - title: Feature A
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature B
