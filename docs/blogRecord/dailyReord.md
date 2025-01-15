@@ -171,7 +171,16 @@ var compareVersion = function(version1, version2) {
 vue API list 总览
 
 ## 2025/1/15 day4
-  算法list
+算法list
+- 450 二叉树删除节点 
+:::info
+[450. 删除二叉搜索树中的节点](https://leetcode.cn/problems/delete-node-in-a-bst/description/)
+思路：由于树结构的特殊性质，使用递归，对三种不同情况进行val值删除处理， 三种情况分别对应
+root.val < key 操作右子树
+root.val > key 操作左子树
+root.val == key 删除根节点 左右子树进行拼接（找：左子树最大/右子树最小）
+:::
+
 
 
 
