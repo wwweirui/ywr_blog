@@ -29,18 +29,27 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '首页', link: '/' },
-      { text: '案例', link: '/demo1/markdown-examples' },
+      // { text: '首页', link: '/' },
+      // { text: '案例', link: '/demo1/markdown-examples' },
+      {
+        text: '个人思考',
+        items: [
+          {
+            items: [
+              { text: 'TodoList', link: '/blogRecord/todoList' },
+              { text: '布道：参悟', link: '/blogRecord/insight' },
+              { text: '计划List', link: '/blogRecord/dailyReord' },
+              { text: '学习项目', link: '/blogRecord/projectMade' },
+              { text: '职业生涯', link: '/blogRecord/SDEFELife' },
+              { text: '金融经济', link: '/blogRecord/financial' },
+              // { text: '个人思考', link: '/blogRecord/dailyProcess' },
+            ],
+          },
+        ],
+      },
       {
         text: '算法地图',
         items: [
-          {
-            // 分组标题1
-            text: '介绍',
-            items: [
-              { text: '前言', link: '/preface' },
-            ],
-          },
           {
             // 分组标题2
             text: '类型分类',
@@ -52,14 +61,7 @@ export default defineConfig({
               // { text: 'Frontmatter', link: '/frontmatter' },
             ],
           },
-          {
-            // 分组标题3
-            text: '进阶玩法',
-            items: [
-              { text: 'Markdown', link: '/Markdown' },
-              { text: '静态部署', link: '/assets' },
-            ],
-          },
+
         ],
       },
     ],
@@ -88,6 +90,21 @@ export default defineConfig({
           items: [
             { text: '数组', link: '/算法地图/数组' },
             { text: '链表', link: '/算法地图/链表' },
+          ],
+        },
+      ],
+      // blogRecord 目录
+      '/blogRecord/': [
+        {
+          text: 'blogRecord',
+          items: [
+            { text: 'TodoList', link: '/blogRecord/todoList' },
+            { text: '布道：参悟', link: '/blogRecord/insight' },
+            { text: '计划List', link: '/blogRecord/dailyReord' },
+            { text: '学习项目', link: '/blogRecord/projectMade' },
+            { text: '职业生涯', link: '/blogRecord/SDEFELife' },
+            { text: '金融经济', link: '/blogRecord/financial' },
+            // { text: '个人思考', link: '/blogRecord/dailyProcess' },
           ],
         },
       ],
