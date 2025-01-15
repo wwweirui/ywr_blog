@@ -1,4 +1,4 @@
-# 学习项目</h1>
+# 学习项目
 个人集合支持网站/ kunkun 主题支持模式
 
 [chengpeiquan - Overview](https://github.com/chengpeiquan)
@@ -13,9 +13,7 @@
 
 [Anthony Fu](https://antfu.me/)
 
-
-
-<h2 id="xW3uM">前端框架</h2>
+## 前端框架
 [Vuetify](https://link.zhihu.com/?target=https%3A//vuetifyjs.com/en/)
 
 [PrimeVue](https://link.zhihu.com/?target=https%3A//www.primefaces.org/primevue/)
