@@ -180,7 +180,40 @@ root.val < key 操作右子树
 root.val > key 操作左子树
 root.val == key 删除根节点 左右子树进行拼接（找：左子树最大/右子树最小）
 :::
+```typescript
+class TreeNode {
+    val: number
+    left: TreeNode | null
+    right: TreeNode | null
+    constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+        this.val = (val===undefined ? 0 : val)
+        this.left = (left===undefined ? null : left)
+        this.right = (right===undefined ? null : right)
+    }
+}
 
+// 使用递归对搜索树不同key进行操作  < = > 三种不同操作
+function deleteNode(root: TreeNode | null, key: number): TreeNode | null { 
+  if(!root) return null;
+  if(root.val == key) {
+    // find the left tree max to link root.right
+    if(!root.right) return root.left;
+    if(!root.left ) return root.right;
+    let t: TreeNode | null = root.left;
+    while(t!.right) t = t!.right;
+    // 连接右边
+    t!.right = root.right;
+    return root.left;
+  } else if(root.val < key) {
+    // 比目标值小 那么在右子树进行操作
+    root.right = deleteNode(root.right, key);
+  } else {
+    root.left = deleteNode(root.left, key);
+  }
+  return null
+}
+
+```
 
 
 
