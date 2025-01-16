@@ -21,7 +21,7 @@ features:
   - icon: 📝
     title: 每日学习
     details: 动动手，用用脑
-    link: /blogRecord/dailyProcess
+    link: /blogRecord/todoList
     linkText: WTF
   - icon: 🏋️
     title: 运动记录

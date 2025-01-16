@@ -31,22 +31,22 @@ export default defineConfig({
     nav: [
       // { text: '首页', link: '/' },
       // { text: '案例', link: '/demo1/markdown-examples' },
-      {
-        text: '个人思考',
-        items: [
-          {
-            items: [
-              { text: 'TodoList', link: '/blogRecord/todoList' },
-              { text: '布道：参悟', link: '/blogRecord/insight' },
-              { text: '计划List', link: '/blogRecord/dailyReord' },
-              { text: '学习项目', link: '/blogRecord/projectMade' },
-              { text: '职业生涯', link: '/blogRecord/SDEFELife' },
-              { text: '金融经济', link: '/blogRecord/financial' },
-              // { text: '个人思考', link: '/blogRecord/dailyProcess' },
-            ],
-          },
-        ],
-      },
+      // {
+      //   text: '个人思考',
+      //   items: [
+      //     {
+      //       items: [
+      //         { text: 'TodoList', link: '/blogRecord/todoList' },
+      //         { text: '布道：参悟', link: '/blogRecord/insight' },
+      //         { text: '计划List', link: '/blogRecord/dailyReord' },
+      //         { text: '学习项目', link: '/blogRecord/projectMade' },
+      //         { text: '职业生涯', link: '/blogRecord/SDEFELife' },
+      //         { text: '金融经济', link: '/blogRecord/financial' },
+      //         // { text: '个人思考', link: '/blogRecord/dailyProcess' },
+      //       ],
+      //     },
+      //   ],
+      // },
       {
         text: '算法地图',
         items: [
@@ -96,7 +96,7 @@ export default defineConfig({
       // blogRecord 目录
       '/blogRecord/': [
         {
-          text: 'blogRecord',
+          text: '个人思考',
           items: [
             { text: 'TodoList', link: '/blogRecord/todoList' },
             { text: '布道：参悟', link: '/blogRecord/insight' },
