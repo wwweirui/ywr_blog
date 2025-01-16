@@ -1,4 +1,3 @@
-
 # 计划list
 ## 60day前端
 
@@ -22,6 +21,10 @@
 + 回顾实力开发流程&整理软实力方面问答
 
 ## 2025/1/12 day1
+<!-- ### 3.无重复字符的最长子串 {#config-intellisense}
+### 88. 合并两个有序数组
+### 165. 比较版本号 -->
+
 - [ ] 每日算法
 
 :::info
@@ -31,7 +34,7 @@
 
 :::
 
-```javascript
+<!-- ```javascript
 https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/
 
 /**
@@ -57,7 +60,7 @@ var lengthOfLongestSubstring = function(s) {
 };
 
 
-```
+``` -->
 
 :::info
 [88. 合并两个有序数组](https://leetcode.cn/problems/merge-sorted-array/)
@@ -80,7 +83,7 @@ var lengthOfLongestSubstring = function(s) {
 
 :::
 
-```javascript
+<!-- ```javascript
 /**
  * @param {number[]} nums1
  * @param {number} m
@@ -104,7 +107,7 @@ var merge = function(nums1, m, nums2, n) {
         }
     }
 };
-```
+``` -->
 
 :::info
 [165. 比较版本号](https://leetcode.cn/problems/compare-version-numbers)
@@ -117,7 +120,7 @@ var merge = function(nums1, m, nums2, n) {
 
 :::
 
-```javascript
+<!-- ```javascript
 /**
  * @param {string} version1
  * @param {string} version2
@@ -138,13 +141,22 @@ var compareVersion = function(version1, version2) {
     } 
     return 0;
 };
-```
+``` -->
 
 - [ ] 手写题
 
 
 
 ## 2025/1/13 day2
+
+<!-- ### 3.无重复字符的最长子串
+### 88 合并两个有序数组
+### 165 比较版本号
+### 1 两数之和
+### 415 字符串相加
+### 146 LRU 缓存 -->
+
+
 + 算法
     - 3.无重复字符的最长子串 code review ✅  需要提醒
     - 88 合并两个有序数组 code review✅ 需要提醒
@@ -159,6 +171,13 @@ var compareVersion = function(version1, version2) {
     - Set WeakSet Map WeakMap
 
 ## 2025/1/14 day3
+<!-- ### 146 LRU 缓存
+### 415 字符串相加
+### 27 移除元素
+### 26. 删除有序数组中的重复项
+### 80. 删除有序数组中的重复项
+### 283 移动零 -->
+
 算法list
 
 + 146 LRU 缓存 code review 手写需反复加深
@@ -171,6 +190,8 @@ var compareVersion = function(version1, version2) {
 vue API list 总览
 
 ## 2025/1/15 day4
+### 450 二叉树删除节点 
+
 算法list
 - 450 二叉树删除节点 
 :::info
@@ -180,7 +201,7 @@ root.val < key 操作右子树
 root.val > key 操作左子树
 root.val == key 删除根节点 左右子树进行拼接（找：左子树最大/右子树最小）
 :::
-```typescript
+<!-- ```typescript
 class TreeNode {
     val: number
     left: TreeNode | null
@@ -213,13 +234,97 @@ function deleteNode(root: TreeNode | null, key: number): TreeNode | null {
   return null
 }
 
-```
+``` -->
 
-
-
-ES6 标准
+ES6 标准学习
 
 + proxy
+- reflect 
+
+## 2025/1/16 day5
+<!-- ### 283. 移动零
+### 844. 比较含退格的字符串 -->
+
+算法
+::: info
+[283. 移动零](https://leetcode.cn/problems/move-zeroes/description/)
+
+解题思路：
+
+还是老样子通过双指针进行操作，但是重写一次还是会出现边界和逻辑细节没有考虑到的问题
+:::
+<!-- ```javascript
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes = function(nums) {
+    // use double fast and slow index to take operation
+
+    let slow = 0;
+    let fast = 0;
+    while(fast < nums.length) {
+        if(nums[fast] !== 0) {
+            // 交换位置
+            [nums[slow], nums[fast]] = [nums[fast], nums[slow]]
+            slow++;
+        }
+        fast++;
+    }
+};
+
+``` -->
+
+::: info
+[844. 比较含退格的字符串](https://leetcode.cn/problems/backspace-string-compare/description/)
+
+思路跟《283. 移动零》的题解利用快慢指针技巧移动零有异曲同工之妙
+
+时间复杂度为O(N+M)，其中 N 和 M 分别为字符串 S 和 T 的长度
+
+常数空间复杂度，无额外空间复杂度
+
+- 可以考虑栈的模拟
+- 也可以使用快慢双指针进行处理
+
+:::
+<!-- ```javascript
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var backspaceCompare = function(s, t) {
+    // 同样还是双指针的快慢移动套路
+    return buildStr(s) == buildStr(t)
+};
+
+const buildStr = (s) => {
+    let slow = 0, fast = 0;
+    let arr = s.split("");
+    while(fast < arr.length) {
+        if(arr[fast] !== '#') {
+            arr[slow] = arr[fast]
+            slow++
+        } else if(slow !== 0) slow--
+        fast++;
+    }
+    arr.length = slow;
+    return arr.join("");
+}
+``` -->
+
+
+
+面试题
+> 
+
+项目探索
+> 组件库搭建 参考 https://blog.csdn.net/Dandrose?type=blog
+
+ 基于 Vue 3、TypeScript、Vite 等最新技术栈开发构建的现代化组件库
+- 思考开发过程中，产品-价值 之间的逻辑关系
+
 
 
 
@@ -228,7 +333,7 @@ ES6 标准
 <hr />
 
 
-<h1 id="wgeAd"><font style="color:rgb(62, 76, 91);">案例标准</font><font style="color:rgb(62, 76, 91);">♿️</font></h1>
+## 案例标准
 <font style="color:rgb(62, 76, 91);">1、本科及以上学历，两年以上工作经验，扎实的计算机基础和前端基础； </font>
 
 <font style="color:rgb(62, 76, 91);">2、熟练掌握React/Vue等大型前端框架，理解底层原理，能够灵活运用； </font>
@@ -244,14 +349,6 @@ ES6 标准
 <font style="color:rgb(62, 76, 91);">有中后台应用的工程经验；</font>
 
 <font style="color:rgb(62, 76, 91);">有全栈实践，熟悉 Node/Python/Go 加分；</font>
-
-
-
-
-
-
-
-
 
 
 
